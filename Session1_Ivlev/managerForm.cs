@@ -30,7 +30,6 @@ namespace Session1_Ivlev
 
         private async void managerForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'session2_IvlevDataSet.Routes1' table. You can move, or remove it, as needed.
             this.routes1TableAdapter.Fill(this.session2_IvlevDataSet.Routes1);
             this.routesTableAdapter.Fill(this.session2_IvlevDataSet.Routes);
             this.airportsTableAdapter.Fill(this.session2_IvlevDataSet.Airports);
@@ -63,6 +62,13 @@ namespace Session1_Ivlev
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            editFlight edf = new editFlight();
+            edf.Show();
+            this.Hide();
         }
     }
 }

@@ -38,11 +38,11 @@ namespace Session1_Ivlev {
         
         private global::System.Data.DataRelation relationFK_Routes_Airports3;
         
-        private global::System.Data.DataRelation relationFK_Schedule_Routes1;
+        private global::System.Data.DataRelation relationFK_Routes_Airports31;
         
         private global::System.Data.DataRelation relationFK_Routes_Airports21;
         
-        private global::System.Data.DataRelation relationFK_Routes_Airports31;
+        private global::System.Data.DataRelation relationFK_Schedule_Routes1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -281,9 +281,9 @@ namespace Session1_Ivlev {
             this.relationFK_Schedule_Routes = this.Relations["FK_Schedule_Routes"];
             this.relationFK_Routes_Airports2 = this.Relations["FK_Routes_Airports2"];
             this.relationFK_Routes_Airports3 = this.Relations["FK_Routes_Airports3"];
-            this.relationFK_Schedule_Routes1 = this.Relations["FK_Schedule_Routes1"];
-            this.relationFK_Routes_Airports21 = this.Relations["FK_Routes_Airports21"];
             this.relationFK_Routes_Airports31 = this.Relations["FK_Routes_Airports31"];
+            this.relationFK_Routes_Airports21 = this.Relations["FK_Routes_Airports21"];
+            this.relationFK_Schedule_Routes1 = this.Relations["FK_Schedule_Routes1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -314,18 +314,18 @@ namespace Session1_Ivlev {
                         this.tableAirports.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableRoutes.ArrivalAirportIDColumn}, false);
             this.Relations.Add(this.relationFK_Routes_Airports3);
-            this.relationFK_Schedule_Routes1 = new global::System.Data.DataRelation("FK_Schedule_Routes1", new global::System.Data.DataColumn[] {
-                        this.tableRoutes1.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSchedules.RouteIDColumn}, false);
-            this.Relations.Add(this.relationFK_Schedule_Routes1);
-            this.relationFK_Routes_Airports21 = new global::System.Data.DataRelation("FK_Routes_Airports21", new global::System.Data.DataColumn[] {
-                        this.tableAirports.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRoutes1.DepartureAirportIDColumn}, false);
-            this.Relations.Add(this.relationFK_Routes_Airports21);
             this.relationFK_Routes_Airports31 = new global::System.Data.DataRelation("FK_Routes_Airports31", new global::System.Data.DataColumn[] {
                         this.tableAirports.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableRoutes1.ArrivalAirportIDColumn}, false);
             this.Relations.Add(this.relationFK_Routes_Airports31);
+            this.relationFK_Routes_Airports21 = new global::System.Data.DataRelation("FK_Routes_Airports21", new global::System.Data.DataColumn[] {
+                        this.tableAirports.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRoutes1.DepartureAirportIDColumn}, false);
+            this.Relations.Add(this.relationFK_Routes_Airports21);
+            this.relationFK_Schedule_Routes1 = new global::System.Data.DataRelation("FK_Schedule_Routes1", new global::System.Data.DataColumn[] {
+                        this.tableRoutes1.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableSchedules.RouteIDColumn}, false);
+            this.Relations.Add(this.relationFK_Schedule_Routes1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2097,23 +2097,23 @@ namespace Session1_Ivlev {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Routes1Row[] GetRoutes1RowsByFK_Routes_Airports21() {
-                if ((this.Table.ChildRelations["FK_Routes_Airports21"] == null)) {
-                    return new Routes1Row[0];
-                }
-                else {
-                    return ((Routes1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Routes_Airports21"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public Routes1Row[] GetRoutes1RowsByFK_Routes_Airports31() {
                 if ((this.Table.ChildRelations["FK_Routes_Airports31"] == null)) {
                     return new Routes1Row[0];
                 }
                 else {
                     return ((Routes1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Routes_Airports31"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Routes1Row[] GetRoutes1RowsByFK_Routes_Airports21() {
+                if ((this.Table.ChildRelations["FK_Routes_Airports21"] == null)) {
+                    return new Routes1Row[0];
+                }
+                else {
+                    return ((Routes1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Routes_Airports21"])));
                 }
             }
         }
@@ -2189,23 +2189,23 @@ namespace Session1_Ivlev {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AirportsRow AirportsRowByFK_Routes_Airports21 {
-                get {
-                    return ((AirportsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Routes_Airports21"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Routes_Airports21"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public AirportsRow AirportsRowByFK_Routes_Airports31 {
                 get {
                     return ((AirportsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Routes_Airports31"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Routes_Airports31"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AirportsRow AirportsRowByFK_Routes_Airports21 {
+                get {
+                    return ((AirportsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Routes_Airports21"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Routes_Airports21"]);
                 }
             }
             

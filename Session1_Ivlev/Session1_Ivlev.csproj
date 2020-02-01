@@ -87,6 +87,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Session2_IvlevDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Session2_IvlevDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session2_IvlevDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminForm.resx">
       <DependentUpon>adminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editFlight.aa-DJ.resx">
+      <DependentUpon>editFlight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -141,6 +149,17 @@
     </None>
     <None Include="Session2_IvlevDataSet.xss">
       <DependentUpon>Session2_IvlevDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Session2_IvlevDataSet1.xsc">
+      <DependentUpon>Session2_IvlevDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Session2_IvlevDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Session2_IvlevDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Session2_IvlevDataSet1.xss">
+      <DependentUpon>Session2_IvlevDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

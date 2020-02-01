@@ -32,11 +32,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.schedulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.session2_IvlevDataSet = new Session1_Ivlev.Session2_IvlevDataSet();
             this.schedulesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.session2_IvlevDataSet = new Session1_Ivlev.Session2_IvlevDataSet();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.schedulesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,18 +46,11 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.airportsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.schedulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.schedulesTableAdapter = new Session1_Ivlev.Session2_IvlevDataSetTableAdapters.SchedulesTableAdapter();
-            this.airportsTableAdapter = new Session1_Ivlev.Session2_IvlevDataSetTableAdapters.AirportsTableAdapter();
-            this.routesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.routesTableAdapter = new Session1_Ivlev.Session2_IvlevDataSetTableAdapters.RoutesTableAdapter();
-            this.fKScheduleRoutesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.schedulesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.fKRoutesAirports31BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.routes1TableAdapter = new Session1_Ivlev.Session2_IvlevDataSetTableAdapters.Routes1TableAdapter();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.From = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -67,16 +60,23 @@
             this.routeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.economyPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.schedulesTableAdapter = new Session1_Ivlev.Session2_IvlevDataSetTableAdapters.SchedulesTableAdapter();
+            this.airportsTableAdapter = new Session1_Ivlev.Session2_IvlevDataSetTableAdapters.AirportsTableAdapter();
+            this.routesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.routesTableAdapter = new Session1_Ivlev.Session2_IvlevDataSetTableAdapters.RoutesTableAdapter();
+            this.fKScheduleRoutesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKRoutesAirports31BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.routes1TableAdapter = new Session1_Ivlev.Session2_IvlevDataSetTableAdapters.Routes1TableAdapter();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.session2_IvlevDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.session2_IvlevDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.routesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKScheduleRoutesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKRoutesAirports31BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,20 +121,15 @@
             this.comboBox5.TabIndex = 9;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
-            // schedulesBindingSource
+            // schedulesBindingSource1
             // 
-            this.schedulesBindingSource.DataMember = "Schedules";
-            this.schedulesBindingSource.DataSource = this.session2_IvlevDataSet;
+            this.schedulesBindingSource1.DataMember = "Schedules";
+            this.schedulesBindingSource1.DataSource = this.session2_IvlevDataSet;
             // 
             // session2_IvlevDataSet
             // 
             this.session2_IvlevDataSet.DataSetName = "Session2_IvlevDataSet";
             this.session2_IvlevDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // schedulesBindingSource1
-            // 
-            this.schedulesBindingSource1.DataMember = "Schedules";
-            this.schedulesBindingSource1.DataSource = this.session2_IvlevDataSet;
             // 
             // label5
             // 
@@ -156,6 +151,11 @@
             this.comboBox4.Size = new System.Drawing.Size(121, 24);
             this.comboBox4.TabIndex = 7;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // schedulesBindingSource2
+            // 
+            this.schedulesBindingSource2.DataMember = "Schedules";
+            this.schedulesBindingSource2.DataSource = this.session2_IvlevDataSet;
             // 
             // label4
             // 
@@ -236,6 +236,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "From";
             // 
+            // schedulesBindingSource
+            // 
+            this.schedulesBindingSource.DataMember = "Schedules";
+            this.schedulesBindingSource.DataSource = this.session2_IvlevDataSet;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(21, 464);
@@ -253,6 +258,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Edit flight";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -286,42 +292,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(789, 277);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // schedulesTableAdapter
-            // 
-            this.schedulesTableAdapter.ClearBeforeFill = true;
-            // 
-            // airportsTableAdapter
-            // 
-            this.airportsTableAdapter.ClearBeforeFill = true;
-            // 
-            // routesBindingSource
-            // 
-            this.routesBindingSource.DataMember = "Routes";
-            this.routesBindingSource.DataSource = this.session2_IvlevDataSet;
-            // 
-            // routesTableAdapter
-            // 
-            this.routesTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKScheduleRoutesBindingSource
-            // 
-            this.fKScheduleRoutesBindingSource.DataMember = "FK_Schedule_Routes";
-            this.fKScheduleRoutesBindingSource.DataSource = this.routesBindingSource;
-            // 
-            // schedulesBindingSource2
-            // 
-            this.schedulesBindingSource2.DataMember = "Schedules";
-            this.schedulesBindingSource2.DataSource = this.session2_IvlevDataSet;
-            // 
-            // fKRoutesAirports31BindingSource
-            // 
-            this.fKRoutesAirports31BindingSource.DataMember = "FK_Routes_Airports31";
-            this.fKRoutesAirports31BindingSource.DataSource = this.airportsBindingSource1;
-            // 
-            // routes1TableAdapter
-            // 
-            this.routes1TableAdapter.ClearBeforeFill = true;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -404,6 +374,37 @@
             this.confirmedDataGridViewCheckBoxColumn.Name = "confirmedDataGridViewCheckBoxColumn";
             this.confirmedDataGridViewCheckBoxColumn.Width = 125;
             // 
+            // schedulesTableAdapter
+            // 
+            this.schedulesTableAdapter.ClearBeforeFill = true;
+            // 
+            // airportsTableAdapter
+            // 
+            this.airportsTableAdapter.ClearBeforeFill = true;
+            // 
+            // routesBindingSource
+            // 
+            this.routesBindingSource.DataMember = "Routes";
+            this.routesBindingSource.DataSource = this.session2_IvlevDataSet;
+            // 
+            // routesTableAdapter
+            // 
+            this.routesTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKScheduleRoutesBindingSource
+            // 
+            this.fKScheduleRoutesBindingSource.DataMember = "FK_Schedule_Routes";
+            this.fKScheduleRoutesBindingSource.DataSource = this.routesBindingSource;
+            // 
+            // fKRoutesAirports31BindingSource
+            // 
+            this.fKRoutesAirports31BindingSource.DataMember = "FK_Routes_Airports31";
+            this.fKRoutesAirports31BindingSource.DataSource = this.airportsBindingSource1;
+            // 
+            // routes1TableAdapter
+            // 
+            this.routes1TableAdapter.ClearBeforeFill = true;
+            // 
             // managerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,15 +422,15 @@
             this.Load += new System.EventHandler(this.managerForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.session2_IvlevDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.session2_IvlevDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.routesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKScheduleRoutesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKRoutesAirports31BindingSource)).EndInit();
             this.ResumeLayout(false);
 
