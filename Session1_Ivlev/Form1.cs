@@ -70,7 +70,9 @@ namespace Session1_Ivlev
 
                         if (passwordTextBox.Text == Convert.ToString(sdr["Password"]))
                         {
-                            MessageBox.Show("Успешно");
+                            adminForm adm = new adminForm();
+                            adm.Show();
+                            this.Hide();
 
                             break;
 
