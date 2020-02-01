@@ -40,14 +40,14 @@ namespace Session1_Ivlev
 
             SqlConnection sqlConnection;
 
-            string connectionPath = @"Data Source = localhost; 
-                Initial Catalog = Session1_Ivlev; 
-                Integrated Security = True; 
-                Connect Timeout = 30; 
-                Encrypt = False; 
-                TrustServerCertificate = False; 
-                ApplicationIntent = ReadWrite; 
-                MultiSubnetFailover = False";
+            string connectionPath = @"
+                Data Source=localhost;
+                Initial Catalog=Session2_Ivlev;
+                Integrated Security=True;
+                Connect Timeout=30;Encrypt=False;
+                TrustServerCertificate=False;
+                ApplicationIntent=ReadWrite;
+                MultiSubnetFailover=False";
 
             sqlConnection = new SqlConnection(connectionPath);
             await sqlConnection.OpenAsync();
@@ -55,8 +55,6 @@ namespace Session1_Ivlev
             SqlDataReader sdr = null;
 
             SqlCommand cmdSelect = new SqlCommand("SELECT * FROM [Users]", sqlConnection);
-
-            bool checkLogin = false;
 
 
             try
@@ -66,23 +64,31 @@ namespace Session1_Ivlev
                 {
                     if (usernameTextBox.Text == Convert.ToString(sdr["Email"]))
                     {
-                        checkLogin = true;
 
                         if (passwordTextBox.Text == Convert.ToString(sdr["Password"]))
                         {
-                            adminForm adm = new adminForm();
-                            adm.Show();
-                            this.Hide();
+                            switch (Convert.ToString(sdr["RoleID"]))
+                            {
+                                case "1":
+                                    adminForm adm = new adminForm();
+                                    adm.Show();
+                                    this.Hide();
 
-                            break;
+                                    break;
 
+                                case "3":
+                                    managerForm mng = new managerForm();
+                                    mng.Show();
+                                    this.Hide();
+
+                                    break;
+                            }
                         } else
                         {
                             warningLabel.Text = "Пароль неверный!";
                             warningLabel.Visible = true;
 
                             countAttempt--;
-                            break;
                         }
                     } else
                     {
@@ -90,7 +96,6 @@ namespace Session1_Ivlev
                         warningLabel.Visible = true;
 
                         countAttempt--;
-                        break;
                     }
                 }
 

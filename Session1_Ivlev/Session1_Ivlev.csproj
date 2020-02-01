@@ -64,6 +64,29 @@
     <Compile Include="adminForm.Designer.cs">
       <DependentUpon>adminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="editFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editFlight.Designer.cs">
+      <DependentUpon>editFlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="importChangesFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="importChangesFlight.Designer.cs">
+      <DependentUpon>importChangesFlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerForm.Designer.cs">
+      <DependentUpon>managerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session2_IvlevDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session2_IvlevDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +103,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editFlight.resx">
+      <DependentUpon>editFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="importChangesFlight.resx">
+      <DependentUpon>importChangesFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerForm.resx">
+      <DependentUpon>managerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +131,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Session2_IvlevDataSet.xsc">
+      <DependentUpon>Session2_IvlevDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Session2_IvlevDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Session2_IvlevDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Session2_IvlevDataSet.xss">
+      <DependentUpon>Session2_IvlevDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
